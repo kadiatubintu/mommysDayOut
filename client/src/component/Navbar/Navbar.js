@@ -1,5 +1,4 @@
 import React from 'react';
-import { Navbar, Container } from 'reactstrap';
 import styled from 'styled-components';
 
 const Button = styled.button`

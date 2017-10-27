@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormGroup, Label, Input, Col, Row } from 'reactstrap';
+import {FormGroup, Label, Input } from 'reactstrap';
 import styled from 'styled-components';
 import States from '../../../data/States';
 

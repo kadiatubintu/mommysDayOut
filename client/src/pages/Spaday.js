@@ -1,12 +1,8 @@
 // import React from "react" ;
 import React, { Component } from 'react';
 import Badge  from "../component/Header/SpadayBadge";
-import Checkbox from "../component/Checkbox";
 import DaysBtns from "../component/DaysBtns";
-import Location from "../component/Location";
-import Price from "../component/Dropdowns/Price";
-import Submit from "../component/Buttons/Submit";
-import CardLists from "../component/CardLists";
+import PagesBtn from "../component/Buttons/PagesBtn";
 import SpadayBtns from "../component/ActivityBtns/SpadayBtns";
 
 class App extends Component {
@@ -15,12 +11,11 @@ class App extends Component {
      <div>
         <Badge />
         <DaysBtns />
-        <Price />
-        <Submit />
+        <SpadayBtns />
+        <PagesBtn />
       </div>
     );
    };
   }
-
 
 export default App;

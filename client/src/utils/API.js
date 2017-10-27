@@ -1,52 +1,39 @@
-import axios from "./axios";
+import axios from "axios";
 
 export default {
-  fetchActivites: function(activities) {
-    const encodedURI = window.encodedURI("https://maps.googleapis.com/maps/api/place/textsearch/output?parameters ");
-  },
+ getPlace(){
+    const location =  "9938 mallard";
+    axios.get("https://maps.googleapis.com/maps/api/geocode/json", {
+      params: {
+        address:location,
+        key: "AIzaSyBcY8rW5GYteecxhkW1PNAwswuKFbPuWrE",
+      }
+    })
+    .then(function(response){
+      console.log(response)
+      var formattedAddress  = response.data.results[0].formatted_address;
+      var formattedAddressOutput =  `
+       <ul class="list-group">
+        <li class="list-group-item">${formattedAddress}</li>
+       </ul>
+      `;
 
-  getHotel: function() {
-    return axios.get (" ");
-  },
+      var addressComponent = response.data.results[0].addressComponent;
+      var addressComponentOutput = '<ul class="list-group">';
+      for (var i =0; i < addressComponent.length; i++){
+        addressComponentOutput += `
+        <li
+          class="list-group-item">${addressComponent[i].types[0]}:${addressComponent[i].long_name}</li>
+        `
+      }
+      addressComponentOutput += '</ul>'
 
-  getNightClubs: function() {
-    return axios.get (" ");
-  },
+     document.getElementById("formatted_address").innerHTML = formattedAddressOutput;
+     document.getElementById("address-component").innerHTML = addressComponentOutput;
+     })
 
-  getCasinos: function() {
-    return axios.get (" ");
-  },
-
-  getMassage: function() {
-    return axios.get (" ");
-  },
-
-  getShopping: function() {
-    return axios.get (" ");
-  },
-
-  getHairSalon: function() {
-    return axios.get (" ");
-  },
-
-  getNailSalon: function() {
-    return axios.get (" ");
-  },
-
-  getMuseums: function() {
-    return axios.get (" ");
-  },
-
-  getSites: function() {
-    return axios.get (" ");
-  },
-
-  getComedyShows: function() {
-    return axios.get (" ");
-  },
-
-  getConcerts: function() {
-    return axios.get (" ");
-  },
-
-};
+    .catch(function(error){
+      console.log(error)
+    })
+  }
+}

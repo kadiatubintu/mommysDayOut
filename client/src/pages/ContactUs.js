@@ -1,4 +1,3 @@
-// import React from "react";
 import React, { Component } from 'react';
 import Badge from "../component/Header/ContactUsBadge";
 import ContactForm from "../component/ContactForm";
@@ -13,6 +12,5 @@ class ContactUs extends Component {
     );
    };
   }
-
 
 export default ContactUs;

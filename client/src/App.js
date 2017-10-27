@@ -1,5 +1,4 @@
 import React from "react";
-import { Container} from "reactstrap";
 import Navbar from "./component/Navbar";
 import Wrapper from "./component/Wrapper";
 import Footer from "./component/Footer";

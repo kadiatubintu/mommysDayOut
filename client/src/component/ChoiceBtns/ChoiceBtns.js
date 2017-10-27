@@ -7,9 +7,6 @@ import styled from "styled-components";
   background-color: white;
   border-radius:5px;
   margin: 50px;
-  &:hover {
-     background-color: blue;
-   }
   `;
 
   const Button = styled.button`
@@ -41,23 +38,22 @@ export default class Example extends React.Component {
     window.location = "./Nightlife"
     }
 
-    handleSpadaypage(e) {
+   handleSpadaypage(e) {
+    e.preventDefault()
+    window.location = "./Spaday"
+    }
+
+    handleSightseeingpage(e) {
       e.preventDefault()
-      window.location = "./Spaday"
+      window.location = "./Sightseeing"
       }
-
-      handleSightseeingpage(e) {
-        e.preventDefault()
-        window.location = "./Sightseeing"
-        }
-
 
   render() {
     return (
       <Div>
-      <Button onClick={(e) =>this.handleNightlifepage(e)}>Night Life</Button>
-      <Button onClick={(e) =>this.handleSpadaypage(e)}>Spa Day</Button>
-      <Button onClick={(e) =>this.handleSightseeingpage(e)}>Sight Seeing</Button>
+        <Button onClick={(e) =>this.handleNightlifepage(e)}>Night Life</Button>
+        <Button onClick={(e) =>this.handleSpadaypage(e)}>Spa Day</Button>
+        <Button onClick={(e) =>this.handleSightseeingpage(e)}>Sight Seeing</Button>
       </Div>
      );
    }
