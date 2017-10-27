@@ -16,7 +16,6 @@ class App extends Component {
         <Badge />
         <DaysBtns />
         <Price />
-        <SpadayBtns activities={["All", " Massage ", "Hair Salon", " Nail Salon ", " Shopping "]} />
         <Submit />
       </div>
     );
