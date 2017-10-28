@@ -19,7 +19,13 @@
     "react-transition-group": "^2.2.1",
     "reactstrap": "^5.0.0-alpha.3",
     "styled-components": "^2.2.1",
-    "superagent": "^3.8.0"
+    "superagent": "^3.8.0",
+    "file-loader": "^1.1.5",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+
   },
   "scripts": {
     "start": "react-scripts start",
