@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import Badge  from "../component/Header/SpadayBadge";
 import DaysBtns from "../component/DaysBtns";
-import PagesBtn from "../component/Buttons/PagesBtn";
 import SpadayBtns from "../component/ActivityBtns/SpadayBtns";
 
 class App extends Component {
@@ -12,7 +11,6 @@ class App extends Component {
         <Badge />
         <DaysBtns />
         <SpadayBtns />
-        <PagesBtn />
       </div>
     );
    };

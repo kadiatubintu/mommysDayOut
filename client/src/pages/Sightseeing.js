@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Badge  from "../component/Header/SightseeingBadge";
 import DaysBtns from "../component/DaysBtns";
 import SightseeingBtns from "../component/ActivityBtns/SightseeingBtns"
-import PagesBtn  from "../component/Buttons/PagesBtn";
 
 class App extends Component {
  render() {
@@ -12,7 +11,6 @@ class App extends Component {
         <Badge />
         <DaysBtns />
         <SightseeingBtns />
-        <PagesBtn />
      </div>
     );
    };
